@@ -13,10 +13,13 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Person person1= new Person("Dawid","Kamasz", 29);
-        Person person2= new Person("Marcin","Rozwor", 32);
-        Person person3= new Person("Daniel","Worek", 34);
-        Person person4= new Person("Michal","Pilak", 19);
+
+
+
+      /*  Person person1 = new Person("Dawid", "Kamasz", 29);
+        Person person2 = new Person("Marcin", "Rozwor", 32);
+        Person person3 = new Person("Daniel", "Worek", 34);
+        Person person4 = new Person("Michal", "Pilak", 19);*/
 
         //ZADANIE 1
        /* ObjectMapper objectMapper= new ObjectMapper();
@@ -24,13 +27,13 @@ public class Main {
         try {
             personStr = objectMapper.writeValueAsString(person1);
             System.out.println(personStr);
-            // do pliku person.json zapisac wynikowego stringa
-            Files.write(Paths.get("person.json"),personStr.getBytes());
+            // do pliku person.readjson zapisac wynikowego stringa
+            Files.write(Paths.get("person.readjson"),personStr.getBytes());
         } catch (IOException e) {
             e.printStackTrace();
         }*/
 
-       //ZADANIE 2
+        //ZADANIE 2
         /*List<Person> personList= new ArrayList<>();
         personList.add(person1);
         personList.add(person2);
@@ -41,14 +44,14 @@ public class Main {
         try {
             String asd = objectMapper.writeValueAsString(personList);
             System.out.println(personList);
-            Files.write(Paths.get("person.json"),asd.getBytes());
+            Files.write(Paths.get("person.readjson"),asd.getBytes());
 
         } catch (IOException e) {
             e.printStackTrace();
         }*/
 
 
-        //ZADANIE 3
+       /* //ZADANIE 3
         Address address= new Address("Bydgszocz","Grunwaldzka");
         Student student1= new Student(person1.name,person1.lastName,address);
         Student student2= new Student(person2.name,person2.lastName,address);
@@ -62,12 +65,13 @@ public class Main {
         studentList.add(student3);
         try {
             String result =objectMapper.writeValueAsString(studentList);
-            Files.write(Paths.get("person.json"),result.getBytes());
-            Student[] students = objectMapper.readValue(new File("person.json"),Student[].class);
+            Files.write(Paths.get("person.readjson"),result.getBytes());
+            Student[] students = objectMapper.readValue(new File("person.readjson"),Student[].class);
             List<Student> studentList1= Arrays.asList(students);
             System.out.println(studentList1);
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }*/
     }
 }

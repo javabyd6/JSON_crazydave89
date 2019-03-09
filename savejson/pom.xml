@@ -5,13 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.sda</groupId>
-    <artifactId>JSON_crazydave89</artifactId>
+    <artifactId>savejson</artifactId>
     <version>1.0-SNAPSHOT</version>
-
-    <modules>
-        <module>readjson</module>
-        <module>savejson</module>
-    </modules>
 
     <build>
         <plugins>
@@ -37,13 +32,21 @@
         </plugins>
     </build>
 
-<dependencies>
-    <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
-    <dependency>
-        <groupId>com.fasterxml.jackson.core</groupId>
-        <artifactId>jackson-core</artifactId>
-        <version>2.9.8</version>
-    </dependency>
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.6</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.9.8</version>
+        </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
         <dependency>
@@ -51,16 +54,7 @@
             <artifactId>jackson-databind</artifactId>
             <version>2.9.8</version>
         </dependency>
+    </dependencies>
 
-    <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
-    <dependency>
-        <groupId>org.projectlombok</groupId>
-        <artifactId>lombok</artifactId>
-        <version>1.18.6</version>
-        <scope>provided</scope>
-    </dependency>
-
-
-</dependencies>
-
+    
 </project>
