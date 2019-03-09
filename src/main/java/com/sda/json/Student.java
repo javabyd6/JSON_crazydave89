@@ -5,6 +5,24 @@ public class Student {
     String lastName;
     Address address;
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", address=" + address +
+                '}';
+    }
+
+    public Student() {
+    }
+
+    public Student(String name, String lastName, Address address) {
+        this.name = name;
+        this.lastName = lastName;
+        this.address = address;
+    }
+
     public String getName() {
         return name;
     }
@@ -29,9 +47,4 @@ public class Student {
         this.address = address;
     }
 
-    public Student(String name, String lastName, Address address) {
-        this.name = name;
-        this.lastName = lastName;
-        this.address = address;
-    }
 }

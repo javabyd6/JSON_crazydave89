@@ -3,10 +3,12 @@ package com.sda.json;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
@@ -51,7 +53,9 @@ public class Main {
         Student student1= new Student(person1.name,person1.lastName,address);
         Student student2= new Student(person2.name,person2.lastName,address);
         Student student3= new Student(person3.name,person3.lastName,address);
+
         ObjectMapper objectMapper= new ObjectMapper();
+
         List<Student> studentList= new ArrayList<>();
         studentList.add(student1);
         studentList.add(student2);
@@ -59,6 +63,9 @@ public class Main {
         try {
             String result =objectMapper.writeValueAsString(studentList);
             Files.write(Paths.get("person.json"),result.getBytes());
+            Student[] students = objectMapper.readValue(new File("person.json"),Student[].class);
+            List<Student> studentList1= Arrays.asList(students);
+            System.out.println(studentList1);
         } catch (IOException e) {
             e.printStackTrace();
         }

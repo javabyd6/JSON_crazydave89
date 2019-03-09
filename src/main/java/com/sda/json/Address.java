@@ -4,6 +4,17 @@ public class Address {
     String city;
     String street;
 
+    @Override
+    public String toString() {
+        return "Address{" +
+                "city='" + city + '\'' +
+                ", street='" + street + '\'' +
+                '}';
+    }
+
+    public Address() {
+    }
+
     public String getCity() {
         return city;
     }
