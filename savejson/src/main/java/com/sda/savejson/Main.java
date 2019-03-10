@@ -2,6 +2,9 @@ package com.sda.savejson;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sda.json.Address;
+import com.sda.json.Person;
+import com.sda.json.Student;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -31,6 +34,5 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 }
